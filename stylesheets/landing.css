@@ -23,6 +23,9 @@ body {
 
 .hexagons-container {
   background-image: url("../assets/images/hexagons.png");
+  background-repeat: repeat-y;
+  background-position: 34% 24%;
+  background-size: 70%;
 }
 
 .main-text-container {
@@ -83,7 +86,7 @@ header {
   margin: 0 2rem 0 2rem;
   font-family: Inter;
   font-style: normal;
-  font-size: 1.2rem;
+  font-size: 3.4vw;
   text-align: justify;
   color: var(--text-color);
 }
@@ -94,7 +97,7 @@ header {
   color: var(--main-color);
   text-align: center;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 4.2vw;
 }
 
 .button-container {
@@ -145,6 +148,7 @@ header {
   font-family: Raleway;
   font-style: normal;
   font-weight: normal;
+  font-size: 3.4vw;
 }
 
 .send-button {
