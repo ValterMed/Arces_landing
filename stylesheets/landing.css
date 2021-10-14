@@ -40,7 +40,7 @@ header {
   top: 0;
   width: 100%;
   max-height: 15vh;
-  background-color: white;
+  background-color: rgb(15, 170, 175);
 }
 
 .header__logo-container {
