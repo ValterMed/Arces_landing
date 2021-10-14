@@ -43,6 +43,10 @@ header {
   background-color: white;
 }
 
+.header__logo-container {
+  display: flex;
+}
+
 .header__logo-container .header__img {
   max-width: 55vw;
   margin: 5%;
@@ -134,6 +138,7 @@ header {
 
 .form__input {
   width: 100%;
+  outline: none;
   border-top: none;
   border-right: none;
   border-left: none;
@@ -141,6 +146,12 @@ header {
   border-bottom-style: solid;
   border-bottom-color: #9b9b9b;
   margin-bottom: 15%;
+  font-size: 3.4vw;
+}
+
+.phone {
+  -webkit-appearance: textfield !important;
+  -moz-appearance: textfield !important;
 }
 
 .form__input::placeholder {
@@ -159,6 +170,7 @@ header {
   background-color: white;
   color: var(--secondary-color);
   border-radius: 7px;
+  cursor: pointer;
 }
 
 .footer-container {
