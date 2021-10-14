@@ -45,12 +45,13 @@ header {
 
 .header__logo-container {
   display: flex;
-  z-index: 1;
 }
 
 .header__logo-container .header__img {
   max-width: 55vw;
   margin: 5%;
+  position: relative;
+  z-index: 1;
 }
 
 .header__social-networks {
