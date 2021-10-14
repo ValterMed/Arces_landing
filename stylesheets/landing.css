@@ -15,7 +15,14 @@ body {
 }
 
 .first-section {
-  height: 70vh;
+  height: 75vh;
+  background-image: url("../assets/images/mobile-structure.png");
+  background-repeat: no-repeat;
+  background-position: 70% 32%;
+}
+
+.hexagons-container {
+  background-image: url("../assets/images/hexagons.png");
 }
 
 .main-text-container {
@@ -23,6 +30,7 @@ body {
 }
 
 header {
+  z-index: 1;
   position: fixed;
   display: flex;
   justify-content: space-between;
@@ -55,6 +63,8 @@ header {
 }
 
 .logos-container {
+  position: relative;
+  bottom: 10vh;
   margin-top: 25%;
   margin-left: auto;
   margin-right: auto;
@@ -79,6 +89,8 @@ header {
 }
 
 .text-container__title {
+  position: relative;
+  bottom: 5vh;
   color: var(--main-color);
   text-align: center;
   font-weight: bold;
@@ -86,9 +98,11 @@ header {
 }
 
 .button-container {
+  position: relative;
+  bottom: 5vh;
   width: 20px;
   margin: 0 50%;
-  height: 5vh;
+  height: 10vh;
 }
 
 .down-button {
@@ -107,7 +121,7 @@ header {
 
 .second-section,
 .third-section {
-  margin-bottom: 40%;
+  margin-bottom: 25%;
 }
 
 .third-section .text-container__title,
@@ -120,7 +134,9 @@ header {
   border-top: none;
   border-right: none;
   border-left: none;
-  border-bottom-width: 1px solid #9b9b9b;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #9b9b9b;
   margin-bottom: 15%;
 }
 
@@ -132,23 +148,36 @@ header {
 }
 
 .send-button {
-  padding: 2% 43%;
+  padding: 3% 43%;
+  border-width: 2px;
+  border-style: solid;
   border-color: var(--secondary-color);
   background-color: white;
   color: var(--secondary-color);
-  border-radius: 10px;
+  border-radius: 7px;
 }
 
 .footer-container {
+  margin: 0 2rem 2rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .footer-text {
+  width: 82%;
   font-family: Inter;
   font-style: normal;
-  font-size: 0.8rem;
+  /* font-size: 0.6rem; -> equivalente en porcentaje fue de 60% */
+  font-size: 1.78vw;
   text-align: justify;
   color: var(--text-color);
+}
+
+.footer-container .cnbv-logo {
+  width: 18%;
+}
+
+.footer-container .cnbv-logo img {
+  width: 78%;
 }
