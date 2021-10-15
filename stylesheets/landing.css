@@ -2,21 +2,23 @@
   --main-color: #28437f;
   --text-color: #9b9b9b;
   --secondary-color: #ff7400;
-  --font-size-standar: 3vw;
 }
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .first-section {
-  height: 75vh;
+  height: 100vh;
   background-image: url("../assets/images/mobile-structure.png");
   background-repeat: no-repeat;
   background-position: 70% 32%;
@@ -30,7 +32,12 @@ body {
 }
 
 .main-text-container {
-  margin-top: 25vh;
+  margin-top: 53px;
+}
+
+.first-card {
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -40,7 +47,7 @@ header {
   justify-content: space-between;
   top: 0;
   width: 100%;
-  max-height: 15vh;
+  height: 53px;
   background-color: white;
 }
 
@@ -49,7 +56,7 @@ header {
 }
 
 .header__logo-container .header__img {
-  max-width: 65%;
+  height: 28px;
   margin: 5%;
 }
 
@@ -71,15 +78,10 @@ header {
 }
 
 .logos-container {
-  position: relative;
-  bottom: 10vh;
-  margin-top: 25%;
-  margin-left: auto;
-  margin-right: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 5%;
+  margin: 10% auto;
   width: 50%;
 }
 
@@ -88,29 +90,25 @@ header {
 }
 
 .text-container {
-  margin: 0 2rem 0 2rem;
+  margin: 0 3rem 0 3rem;
   font-family: Inter;
   font-style: normal;
-  font-size: var(--font-size-standar);
+  font-size: 1.12rem;
   text-align: justify;
   color: var(--text-color);
 }
 
 .text-container__title {
-  position: relative;
-  bottom: 5vh;
   color: var(--main-color);
   text-align: center;
   font-weight: bold;
-  font-size: 4.2vw;
+  font-size: 1.4rem;
 }
 
 .button-container {
-  position: relative;
-  bottom: 15vh;
   width: 20px;
-  margin: 0 50%;
-  height: 10vh;
+  margin: 30% 50%;
+  height: 2rem;
 }
 
 .down-button {
@@ -128,6 +126,17 @@ header {
 }
 
 .second-section,
+.third-section {
+  padding-top: 106px;
+}
+
+.row-elements {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
 .third-section {
   margin-bottom: 25%;
 }
@@ -147,7 +156,7 @@ header {
   border-bottom-style: solid;
   border-bottom-color: #9b9b9b;
   margin-bottom: 15%;
-  font-size: var(--font-size-standar);
+  font-size: 1.12rem;
 }
 
 .phone {
@@ -160,7 +169,7 @@ header {
   font-family: Raleway;
   font-style: normal;
   font-weight: normal;
-  font-size: var(--font-size-standar);
+  font-size: 1.12rem;
 }
 
 .send-button {
@@ -175,7 +184,7 @@ header {
 }
 
 .footer-container {
-  margin: 0 2rem 2rem 2rem;
+  margin: 0 3rem 2rem 3rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -185,7 +194,7 @@ header {
   width: 82%;
   font-family: Inter;
   font-style: normal;
-  font-size: 1.78vw;
+  font-size: 0.57rem;
   text-align: justify;
   color: var(--text-color);
 }
@@ -198,132 +207,226 @@ header {
   width: 78%;
 }
 
-@media (min-width: 768px) {
-  header {
-    height: 10vh;
+@media (min-width: 480px) {
+  /* 
+    mobile 2
+  */
+
+  .header__logo-container .header__img {
+    height: 35px;
   }
+
+  .header__social-networks img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .logos-container {
+    width: 45%;
+  }
+
+  .logos-container img {
+    height: 65px;
+  }
+
+  .text-container {
+    margin: 0 4rem 0 4rem;
+  }
+
+  .text-container__title {
+    font-size: 1.8rem;
+  }
+
+  .text-container {
+    font-size: 1.5rem;
+  }
+
+  .button-container {
+    margin: 15% 50%;
+  }
+
+  .form__input, 
+  .form__input::placeholder {
+    font-size: 1.5rem;
+  }
+
+  .footer-container {
+    margin: 0 4rem 2rem 4rem;
+  }
+
+  .footer-container .cnbv-logo img {
+    width: 80%;
+  }
+
+  .footer-text {
+    font-size: 0.76rem;
+  }
+}
+
+@media (min-width: 768px) {
   .first-section {
-    position: absolute;
-    top: 0;
-    height: 100vh;
     background-image: url("../assets/images/structure-space-office-build-desktop.png");
     background-repeat: no-repeat;
     background-position: 70% 27%;
   }
 
-  .header__logo-container .header__img {
-    margin: 5%;
-    width: 55%;
-    height: 45%;
+  .footer-text {
+    font-size: 1.31rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .button-container {
+    margin: 10% 50%;
   }
 
-  .header__social-networks {
-    margin-right: 50px;
+  .contact-form {
+    margin: 0 20%;
   }
 
-  .header__social-networks img {
-    margin: 0 10px;
+  .footer-text {
+    font-size: 1.56rem;
   }
+}
 
-  .header__social-networks .linkedin {
-    margin-left: 13px;
-  }
+@media (min-width: 1024px) {
+  /* 
+    Desktop
+  */
 
-  .main-text-container {
-    margin-top: unset;
+  header {
+    height: 80px;
   }
 
   .logos-container {
-    width: 20%;
-    position: unset;
-    bottom: unset;
-    margin-top: 10%;
+    width: 40%;
+    margin: 15% auto 8%;
   }
 
   .logos-container img {
     height: 100px;
   }
 
-  .text-container__title {
-    position: unset;
-    bottom: unset;
-    font-size: 5rem;
+  .header__logo-container .header__img {
+    height: 50px;
   }
 
-  .text-container {
-    position: unset;
-    bottom: unset;
-    margin: 0 18rem;
-    font-size: 27px;
+  .header__social-networks {
+    margin-right: 25px;
   }
 
-  .button-container {
-    bottom: unset;
-    height: unset;
-    margin: 45% 50% 0 50%;
-  }
-
-  .hexagons-container {
-    margin-top: 15%;
-  }
-
-  .row-elements {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .image-container img {
-    width: unset;
-  }
-
-  .card {
-    width: 33%;
-  }
-
-  .card img {
-    height: 180px;
-  }
-
-  .hexagons-container {
-    background-position: 47% 60%;
-    background-size: 60%;
+  .header__social-networks img {
+    width: 35px;
+    height: 35px;
   }
 
   .second-section,
   .third-section {
-    margin-bottom: 12%;
+    padding-top: 160px;
+  }
+
+  .main-text-container {
+    margin-top: 80px;
+  }
+
+  .text-container__title {
+    font-size: 3.3rem;
+  }
+
+  .text-container {
+    font-size: 1.85rem;
+  }
+
+  .row-elements {
+    flex-direction: row;
+  }
+
+  .card {
+    width: 33.33%;
+  }
+
+  .image-container img {
+    width: 40%;
+    margin: 15% 30%;
+    height: 200px;
+  }
+
+  .form__input, 
+  .form__input::placeholder {
+    font-size: 1.85rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  header {
+    width: 1200px;
+  }
+
+  .logos-container {
+    width: 35%;
+    margin: 14% auto 5%;
+  }
+
+  .logos-container img {
+    height: 120px;
+  }
+
+  .text-container {
+    margin: 0 10rem;
+  }
+
+  .text-container__title {
+    font-size: 3.5rem;
+  }
+
+  .first-section .text-container p {
+    font-size: 1.8rem;
+  }
+
+  .second-section {
+    margin-bottom: 10%;
+  }
+
+  .second-section .text-container p {
+    font-size: 1.6rem;
+  }
+
+  .second-section,
+  .third-section {
+    padding-top: 160px;
+  }
+
+  .third-section {
+    margin-bottom: 5%;
+  }
+
+  .third-section .text-container p {
+    font-size: 1.9rem;
   }
 
   .third-section .text-container__title,
-  .third-section p {
+  .third-section .text-container p {
     margin-bottom: 5%;
   }
 
   .contact-form {
-    margin: 0 25%;
+    margin: 0 26%;
   }
 
-  .form__input,
+  .form__input, 
   .form__input::placeholder {
-    font-size: 2rem;
-  }
-
-  .send-button {
-    padding: 2% 43%;
-    font-size: 23px;
-    border-width: 3px;
+    font-size: 1.9rem;
   }
 
   .footer-container {
-    margin: 0px 18rem 2rem 18rem;
-  }
-
-  .footer-text {
-    font-size: 1.7rem;
+    margin: 0 10rem 2rem 10rem;
   }
 
   .footer-container .cnbv-logo img {
     width: 50%;
+  }
+
+  .footer-text {
+    font-size: 1.1rem;
   }
 }
