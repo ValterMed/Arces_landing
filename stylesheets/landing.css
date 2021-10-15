@@ -13,6 +13,9 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+.centered-content {
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -358,9 +361,9 @@ header {
 }
 
 @media (min-width: 1200px) {
-  header {
+  /* header {
     width: 1200px;
-  }
+  } */
 
   .logos-container {
     width: 35%;
