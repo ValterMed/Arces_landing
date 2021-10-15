@@ -2,6 +2,7 @@
   --main-color: #28437f;
   --text-color: #9b9b9b;
   --secondary-color: #ff7400;
+  --font-size-standar: 3vw;
 }
 
 html {
@@ -48,25 +49,25 @@ header {
 }
 
 .header__logo-container .header__img {
-  max-width: 55vw;
+  max-width: 65%;
   margin: 5%;
 }
 
 .header__social-networks {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 20vw;
-  margin: 5%;
+  justify-content: flex-end;
+  margin-right: 20px;
 }
 
 .header__social-networks .linkedin {
-  margin-left: 4px;
+  margin-left: 8px;
 }
 
 .header__social-networks img {
   width: 20px;
   height: 20px;
+  margin: 0 5px;
 }
 
 .logos-container {
@@ -83,14 +84,14 @@ header {
 }
 
 .logos-container img {
-  max-width: 40%;
+  height: 50px;
 }
 
 .text-container {
   margin: 0 2rem 0 2rem;
   font-family: Inter;
   font-style: normal;
-  font-size: 3.4vw;
+  font-size: var(--font-size-standar);
   text-align: justify;
   color: var(--text-color);
 }
@@ -106,7 +107,7 @@ header {
 
 .button-container {
   position: relative;
-  bottom: 5vh;
+  bottom: 15vh;
   width: 20px;
   margin: 0 50%;
   height: 10vh;
@@ -146,7 +147,7 @@ header {
   border-bottom-style: solid;
   border-bottom-color: #9b9b9b;
   margin-bottom: 15%;
-  font-size: 3.4vw;
+  font-size: var(--font-size-standar);
 }
 
 .phone {
@@ -159,7 +160,7 @@ header {
   font-family: Raleway;
   font-style: normal;
   font-weight: normal;
-  font-size: 3.4vw;
+  font-size: var(--font-size-standar);
 }
 
 .send-button {
@@ -184,7 +185,6 @@ header {
   width: 82%;
   font-family: Inter;
   font-style: normal;
-  /* font-size: 0.6rem; -> equivalente en porcentaje fue de 60% */
   font-size: 1.78vw;
   text-align: justify;
   color: var(--text-color);
@@ -196,4 +196,134 @@ header {
 
 .footer-container .cnbv-logo img {
   width: 78%;
+}
+
+@media (min-width: 768px) {
+  header {
+    height: 10vh;
+  }
+  .first-section {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    background-image: url("../assets/images/structure-space-office-build-desktop.png");
+    background-repeat: no-repeat;
+    background-position: 70% 27%;
+  }
+
+  .header__logo-container .header__img {
+    margin: 5%;
+    width: 55%;
+    height: 45%;
+  }
+
+  .header__social-networks {
+    margin-right: 50px;
+  }
+
+  .header__social-networks img {
+    margin: 0 10px;
+  }
+
+  .header__social-networks .linkedin {
+    margin-left: 13px;
+  }
+
+  .main-text-container {
+    margin-top: unset;
+  }
+
+  .logos-container {
+    width: 20%;
+    position: unset;
+    bottom: unset;
+    margin-top: 10%;
+  }
+
+  .logos-container img {
+    height: 100px;
+  }
+
+  .text-container__title {
+    position: unset;
+    bottom: unset;
+    font-size: 5rem;
+  }
+
+  .text-container {
+    position: unset;
+    bottom: unset;
+    margin: 0 18rem;
+    font-size: 27px;
+  }
+
+  .button-container {
+    bottom: unset;
+    height: unset;
+    margin: 45% 50% 0 50%;
+  }
+
+  .hexagons-container {
+    margin-top: 15%;
+  }
+
+  .row-elements {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .image-container img {
+    width: unset;
+  }
+
+  .card {
+    width: 33%;
+  }
+
+  .card img {
+    height: 180px;
+  }
+
+  .hexagons-container {
+    background-position: 47% 60%;
+    background-size: 60%;
+  }
+
+  .second-section,
+  .third-section {
+    margin-bottom: 12%;
+  }
+
+  .third-section .text-container__title,
+  .third-section p {
+    margin-bottom: 5%;
+  }
+
+  .contact-form {
+    margin: 0 25%;
+  }
+
+  .form__input,
+  .form__input::placeholder {
+    font-size: 2rem;
+  }
+
+  .send-button {
+    padding: 2% 43%;
+    font-size: 23px;
+    border-width: 3px;
+  }
+
+  .footer-container {
+    margin: 0px 18rem 2rem 18rem;
+  }
+
+  .footer-text {
+    font-size: 1.7rem;
+  }
+
+  .footer-container .cnbv-logo img {
+    width: 50%;
+  }
 }
